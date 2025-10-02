@@ -66,3 +66,16 @@ spec:
       resources:
         requests:
           storage: 5Gi
+
+# Headless Service for MySQL StatefulSet
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-service
+spec:
+  ports:
+  - port: 3306
+    name: mysql
+  clusterIP: None
+  selector:
+    app: mysql
