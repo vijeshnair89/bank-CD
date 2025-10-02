@@ -67,6 +67,7 @@ spec:
         requests:
           storage: 5Gi
 
+---
 # Headless Service for MySQL StatefulSet
 apiVersion: v1
 kind: Service
