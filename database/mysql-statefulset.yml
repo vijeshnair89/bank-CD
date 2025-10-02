@@ -11,20 +11,6 @@ parameters:
 reclaimPolicy: Retain
 volumeBindingMode: WaitForFirstConsumer
 
----
-# persistent volume claim for ebs
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: ebs-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: ebs-sc
-  resources:
-    requests:
-      storage: 5Gi
-
 
 ---
 # StatefulSet for MySQL
